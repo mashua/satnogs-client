@@ -509,8 +509,13 @@ $(document).ready(function() {
                 data.splice(1, 0, 1);
                 data.splice(2, 0, 0);
                 data.splice(3, 0, sch_app_id);
+            } else if (selected_action == 'save_schedules') {
+
+                service_subtype = 23;
+            } else if (selected_action == 'load_schedules') {
+
+                service_subtype = 22;
             }
-            
             request = encode_service(type, app_id, service_type, service_subtype, dest_id, ack, data);
             ecss_cmd_socket.emit('ecss_command', request);
 

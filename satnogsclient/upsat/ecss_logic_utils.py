@@ -249,9 +249,9 @@ def ecss_logic(ecss_dict):
                 if len(ecss_dict['data']) % 13 == 0:
                     for i in range(0, (len(ecss_dict['data']) / 13)):
                         pre_content = [{}]
-                        pre_content[0]["Position"] = str(ecss_dict['data'][pointer])
+                        pre_content[0]["Schedule Position Taken"] = str(ecss_dict['data'][pointer])
                         pointer += 1
-                        pre_content[0]["Enabled"] = str(ecss_dict['data'][pointer])
+                        pre_content[0]["Schedule Enabled"] = str(ecss_dict['data'][pointer])
                         pointer += 1
                         pre_content[0]["App_ID"] = str(ecss_dict['data'][pointer])
                         pointer += 1
